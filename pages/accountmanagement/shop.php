@@ -430,7 +430,7 @@ if(!defined('INITIALIZED'))
 																			<div class="PMCID_Icon_Over" id="PMCID_Icon_Over_1" ></div>
 																			<span style="position: absolute; left: 125px; top: 53px; z-index: 99;" >
 																				<span style="margin-left: 5px; position: absolute; margin-top: 2px;" >																					
-																					<span class="HelperDivIndicator" onMouseOver="ActivateHelperDiv($(this), \'Information:\', \'Premium points can be used to purchase addons, mounts, items and extra services.\', \'\');" onMouseOut="$(\'#HelperDivContainer\').hide();" >
+																					<span class="HelperDivIndicator" onMouseOver="ActivateHelperDiv($(this), \'Information:\', \'Tibia Coins can be used to purchase addons, mounts, items and extra services.\', \'\');" onMouseOut="$(\'#HelperDivContainer\').hide();" >
 																						<image style="border:0px;" src="'.$layout_name.'/images/global/content/info.gif" />
 																					</span>
 																				</span>
@@ -438,7 +438,7 @@ if(!defined('INITIALIZED'))
 																			<img class="PMCID_CP_Icon" src="'.$layout_name.'/images/payment/points.gif" />
 																			<div class="PMCID_CP_Label" >
 																				<input type="radio" id="PMCID_1" name="PMCID" value="1">
-																				<label for="PMCID_1" >Points</label>
+																				<label for="PMCID_1" >Tibia Coins</label>
 																			</div>
 																		</div>
 																	</div>
@@ -502,8 +502,8 @@ if(!defined('INITIALIZED'))
 				$service_price = $shop_offer['price'];
 				$service_points = $shop_offer['points'];
 				$service_name = $shop_offer['offer_name'];
-				if($account_logged->getPremiumPoints() < $service_points)
-					$services_errors[] = "You need at least ".$service_points." points premium to purchase the ".$service_name.".";
+				if($account_logged->getCoins() < $service_points)
+					$services_errors[] = "You need at least ".$service_points." tibia coins to purchase the ".$service_name.".";
 			}
 			if(empty($services_errors))
 				if($account_logged->getKey() == "")
@@ -704,8 +704,8 @@ if(!defined('INITIALIZED'))
 																	</tr>';
 																	$main_content .= '
 																	<tr>
-																		<td class="LabelV200" >Points</td>
-																		<td>' . $service_info['points'] . ' Points</td>
+																		<td class="LabelV200" >Tibia Coins</td>
+																		<td>' . $service_info['points'] . ' Tibia Coins</td>
 																	</tr>';
 															$main_content .= '
 																</table>
@@ -729,7 +729,7 @@ if(!defined('INITIALIZED'))
 																<table class="TableContent" width="100%"  style="border:1px solid #faf0d7;" >
 																	<tr>
 																		<td class="LabelV200" >Payment Method</td>
-																		<td>Premium Points</td>
+																		<td>Tibia Coins</td>
 																	</tr>';
 															if($sendTo == "friend")
 																$main_content .= '
@@ -893,15 +893,15 @@ if(!defined('INITIALIZED'))
 				$services_errors[] = "The friend to whom you want to send the gift does not exist.";
 
 			$service_points = $service_info['points'];
-			$debitPoints = $account_logged->getPremiumPoints() - $service_points;
+			$debitPoints = $account_logged->getCoins() - $service_points;
 					
 			$rules_accept = (int) $_REQUEST['RulesAccept'];
 			$orderDate = time();
 			$account_name = $account_logged->getName();
 			$friend_acc = $friendInfo->getAccount()->getName();
 			
-			if($account_logged->getPremiumPoints() < $service_points)
-				$services_errors[] = "You need at least ".$service_points." points premium to purchase it.";
+			if($account_logged->getCoins() < $service_points)
+				$services_errors[] = "You need at least ".$service_points." Tibia Coins to purchase it.";
 				
 			
 			if($rules_accept == 0)
@@ -921,7 +921,7 @@ if(!defined('INITIALIZED'))
 						} else {
 							$add_order = $SQL->query("INSERT INTO `z_shop_payment` (`account_name`,`service_id`,`service_category_id`,`payment_method_id`,`points`,`status`,`date`,`gift`) VALUES ('$account_name','$service_id','$serviceCategoryID','$payment_method','$service_points','ready','$orderDate','0')");
 						}							
-						$account_logged->setPremiumPoints($debitPoints);
+						$account_logged->getCoins($debitPoints);
 						$account_logged->save();
 					}
 				}
