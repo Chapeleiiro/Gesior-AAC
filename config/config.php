@@ -115,6 +115,19 @@ $config['site']['accounts_hidden'] = array(1);
 # PAGE: lostaccount.php
 $config['site']['email_lai_sec_interval'] = 180;
 
+#  Pagseguro offers
+$config['pagseguro']['offers'] = array(
+    500=>75,
+    800=>125,
+    1500=>250,
+    2800=>500,
+    4900=>1000
+);
+
+$config['pagseguro']['produtoNome'] = 'Tibia Coins';
+$config['pagseguro']['urlRedirect'] =  'https://wwww.malveraglobal.com.br/';
+$config['pagseguro']['urlNotification'] = 'https://wwww.malveraglobal.com.br/retpagseguro.php';
+
 # Layout Config
 $config['site']['layout'] = 'tibiarl';
 $config['site']['vdarkborder'] = '#505050';
