@@ -37,3 +37,5 @@ else
 
 Website::setPasswordsEncryption("sha1");
 $SQL = Website::getDBHandle();
+
+$SQLPDO = $SQL; //compat pagseguro
