@@ -13,8 +13,8 @@ $config['shop']['newitemdays'] = 1;
 # Pagseguro configs
 $config['pagseguro']['testing'] = false;
 $config['pagseguro']['tokentest'] = "";
-$config['pagseguro']['email'] = "";
-$config['pagseguro']['token'] = "";
+$config['pagseguro']['email'] = '';
+$config['pagseguro']['apitoken'] = '';
 
 # Bank transfer data
 $config['banktransfer']['bank'] = "Caixa Econômica";
