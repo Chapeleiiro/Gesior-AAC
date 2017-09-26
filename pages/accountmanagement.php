@@ -837,7 +837,6 @@ else
 														$main_content .= '
 															<td>
 																<b><font class="green">Premium Account</font></b><br>
-																<small>(The server is configured to free premium account, good game!)</small>
 															</td>';
 													} else {
 														$main_content .= '
