@@ -125,6 +125,8 @@ $config['pagseguro']['offers'] = array(
 );
 
 $config['pagseguro']['produtoNome'] = 'Tibia Coins';
+$config['pagseguro']['urlRedirect'] =  'http://127.0.0.1/';
+$config['pagseguro']['urlNotification'] = 'http://127.0.0.1/retpagseguro.php';
 
 # Layout Config
 $config['site']['layout'] = 'tibiarl';
