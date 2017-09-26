@@ -77,15 +77,13 @@ if(!defined('INITIALIZED'))
 	<div id="DeactivationContainer" onclick="DisableDeactivationContainer();"></div>
 	<a name="top"></a>
   	<div id="DeactivationContainer" onclick="DisableDeactivationContainer();"></div>
-
   	<div id="MainHelper1">
     	<div id="MainHelper2">
       		<div id="ArtworkHelper1">
         		<div id="ArtworkHelper2">
           			<div id="HeaderArtworkDiv" style="background-image:url(<?php echo $layout_name; ?>/images/global/header/background-artwork.jpg);"></div>
         		</div>
-      		</div>
-
+				</div>
       		<div id="Bodycontainer">
         		<div id="ContentRow">
           			<div id="MenuColumn">
@@ -93,24 +91,33 @@ if(!defined('INITIALIZED'))
               				<a href="/?subtopic=latestnews">
 								<img id="TibiaLogoArtworkTop" src="<?php echo $layout_name; ?>/images/global/header/tibia-logo-artwork-top.gif" alt="logoartwork">
 							</a>
-              				<img id="LogoLink" src="<?php echo $layout_name; ?>/images/global/general/blank.gif" onclick="window.location = &#39;http://monteirosoft.com&#39;;" alt="logoartwork">
+              				<!--
+							<img id="LogoLink" src="<?php echo $layout_name; ?>/images/global/general/blank.gif" onclick="window.location = &#39;http://cipsoft.com&#39;;" alt="logoartwork">
+							-->
             			</div>
-            
   						<div id="Loginbox">
     						<div id="LoginTop" style="background-image:url(<?php echo $layout_name; ?>/images/global/general/box-top.gif)"></div>
     						<div id="BorderLeft" class="LoginBorder" style="background-image:url(<?php echo $layout_name; ?>/images/global/general/chain.gif)"></div>
     						<div id="LoginButtonContainer" style="background-image:url(<?php echo $layout_name; ?>/images/global/loginbox/loginbox-textfield-background.gif)">
-      							<div id="PlayNowContainer"><form class="MediumButtonForm" action="?subtopic=accountmanagement" method="post"><input type="hidden" name="page" value="overview"><div class="MediumButtonBackground" style="background-image:url(<?php echo $layout_name; ?>/images/global/buttons/mediumbutton.gif)" onmouseover="MouseOverMediumButton(this);" onmouseout="MouseOutMediumButton(this);"><div class="MediumButtonOver" style="background-image:url(<?php echo $layout_name; ?>/images/global/buttons/mediumbutton-over.gif)" onmouseover="MouseOverMediumButton(this);" onmouseout="MouseOutMediumButton(this);"></div><input class="MediumButtonText" type="image" name="Play Now" alt="Play Now" src="<?php echo $layout_name; ?>/images/global/buttons/mediumbutton_playnow.png"></div></form>
-								</div>
+      						<div id="PlayNowContainer"><form class="MediumButtonForm" action="?subtopic=accountmanagement" method="post"><input type="hidden" name="page" value="overview"><div class="MediumButtonBackground" style="background-image:url(<?php echo $layout_name; ?>/images/global/buttons/mediumbutton.gif)" onmouseover="MouseOverMediumButton(this);" onmouseout="MouseOutMediumButton(this);"><div class="MediumButtonOver" style="background-image:url(<?php echo $layout_name; ?>/images/global/buttons/mediumbutton-over.gif)" onmouseover="MouseOverMediumButton(this);" onmouseout="MouseOutMediumButton(this);"></div><input class="MediumButtonText" type="image" name="Play Now" alt="Play Now" src="<?php echo $layout_name; ?>/images/global/buttons/mediumbutton_playnow.png"></div></form>
+							</div>
     						</div>
     						<div class="Loginstatus" style="background-image:url(<?php echo $layout_name; ?>/images/global/loginbox/loginbox-textfield-background.gif)">
-      							<div id="LoginstatusText" onclick="LoginstatusTextAction(this);" onmouseover="MouseOverLoginBoxText(this);" onmouseout="MouseOutLoginBoxText(this);"><div id="LoginstatusText_1" class="LoginstatusText" style="background-image: url(<?php echo $layout_name; ?>/images/global/loginbox/loginbox-font-create-account.gif);"></div><div id="LoginstatusText_2" class="LoginstatusText" style="background-image: url(<?php echo $layout_name; ?>/images/global/loginbox/loginbox-font-create-account-over.gif);"></div>
-								</div>
+      						<div id="LoginstatusText" onclick="LoginstatusTextAction(this);" onmouseover="MouseOverLoginBoxText(this);" onmouseout="MouseOutLoginBoxText(this);"><div id="LoginstatusText_1" class="LoginstatusText" style="background-image: url(<?php echo $layout_name; ?>/images/global/loginbox/loginbox-font-create-account.gif);"></div><div id="LoginstatusText_2" class="LoginstatusText" style="background-image: url(<?php echo $layout_name; ?>/images/global/loginbox/loginbox-font-create-account-over.gif);"></div>
+							</div>
     						</div>
     						<div id="BorderRight" class="LoginBorder" style="background-image:url(<?php echo $layout_name; ?>/images/global/general/chain.gif)"></div>
     						<div id="LoginBottom" class="Loginstatus" style="background-image:url(<?php echo $layout_name; ?>/images/global/general/box-bottom.gif)"></div>
   						</div>
-						
+						<div class="SmallMenuBox" style="top: 4px;" >
+							<div id="LoginTop" style="background-image:url(<?php echo $layout_name; ?>/images/global/general/box-top.gif)" ></div>
+							<div id="BorderLeft" class="LoginBorder" style="background-image:url(<?php echo $layout_name; ?>/images/global/general/chain.gif); height: 39px;" ></div>
+							<div id="LoginButtonContainer" style="background-image:url(<?php echo $layout_name; ?>/images/global/loginbox/loginbox-textfield-background.gif)" >
+							<div id="PlayNowContainer" ><form class="MediumButtonForm" action="?subtopic=downloadclient&step=downloadagreement" method="post" ><div class="MediumButtonBackground" style="background-image:url(<?php echo $layout_name; ?>/images/global/buttons/mediumbutton.gif)" onMouseOver="MouseOverMediumButton(this);" onMouseOut="MouseOutMediumButton(this);" ><div class="MediumButtonOver" style="background-image:url(<?php echo $layout_name; ?>/images/global/buttons/mediumbutton-over.gif)" onMouseOver="MouseOverMediumButton(this);" onMouseOut="MouseOutMediumButton(this);" ></div><input class="MediumButtonText" type="image" name="Download" alt="Download" src="<?php echo $layout_name; ?>/images/global/buttons/mediumbutton_download.png" /></div></form></div>
+						</div>
+							<div id="BorderRight" class="LoginBorder" style="background-image:url(<?php echo $layout_name; ?>/images/global/general/chain.gif); height: 39px;" ></div>
+							<div id="LoginBottom" class="Loginstatus" style="background-image:url(<?php echo $layout_name; ?>/images/global/general/box-bottom.gif); top: 39px;" ></div>
+						</div>
 						<div id="Menu">
 							<div id="MenuTop" style="background-image:url(<?php echo $layout_name; ?>/images/global/general/box-top.gif);"></div>
 							<div id="news" class="menuitem">
@@ -506,11 +513,11 @@ if(!defined('INITIALIZED'))
 									</div>
 								</div>
 							</div>
-    
 							<div id="Footer">
-								Copyright by CipSoft GmbH. All rights reserved.<br>
-								Desenvolvido por <strong>Felipe Monteiro</strong> | <a href="http://www.monteirosoft.com" target="_blank">Monteiro Soft - Desenvolvimento Web</a>
-            				</div>
+								<script type="text/javascript" src="https://cdn.ywxi.net/js/1.js" async></script>
+								Copyright by <a href="#" target="_new"><b>CipSoft GmbH</b></a>. All rights reserveds<br>
+								<a href=?subtopic=forum><b>Game Forum</b></a> | <a href=<?php echo $config['social']['facebook']; ?>><b>Facebook</b></a> | <a href=?subtopic=team><b>Support Game</b></a><br>
+							</div>
           				</div>
         			</div>
       			</div>
