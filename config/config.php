@@ -125,8 +125,6 @@ $config['pagseguro']['offers'] = array(
 );
 
 $config['pagseguro']['produtoNome'] = 'Tibia Coins';
-$config['pagseguro']['urlRedirect'] =  'https://wwww.malveraglobal.com.br/';
-$config['pagseguro']['urlNotification'] = 'https://wwww.malveraglobal.com.br/retpagseguro.php';
 
 # Layout Config
 $config['site']['layout'] = 'tibiarl';
