@@ -311,16 +311,6 @@ else
 																					</div>
 																				</div>
 																			</form>';
-																	if($group_id_of_acc_logged >= $config['site']['access_admin_panel']) {
-																			$main_content .= '
-																				<div style="font-size:1px;height:4px;"></div>
-																				<form action="?subtopic=adminpanel" method="post" style="padding:0px;margin:0px;">
-																					<div class="BigButton" style="background-image:url('.$layout_name.'/images/global/buttons/sbutton_green.gif)">
-																						<div onmouseover="MouseOverBigButton(this);" onmouseout="MouseOutBigButton(this);"><div class="BigButtonOver" style="background-image:url('.$layout_name.'/images/global/buttons/sbutton_green_over.gif);"></div>
-																							<input class="ButtonText" type="image" name="Logout" alt="Logout" src="'.$layout_name.'/images/global/buttons/_sbutton_painel.gif">
-																						</div>
-																					</div>
-																				</form>';
 																	$main_content .= '
 																			<div style="font-size:1px;height:4px;"></div>
 																				<form action="?subtopic=accountmanagement&action=donate" method="post" style="padding:0px;margin:0px;">
@@ -339,6 +329,16 @@ else
 																					<div class="BigButton" style="background-image:url('.$layout_name.'/images/global/buttons/sbutton_red.gif)">
 																						<div onmouseover="MouseOverBigButton(this);" onmouseout="MouseOutBigButton(this);"><div class="BigButtonOver" style="background-image:url('.$layout_name.'/images/global/buttons/sbutton_red_over.gif);"></div>
 																							<input class="ButtonText" type="image" name="Logout" alt="Logout" src="'.$layout_name.'/images/global/buttons/_sbutton_logout.gif">
+																						</div>
+																					</div>
+																				</form>';
+																	if($group_id_of_acc_logged >= $config['site']['access_admin_panel']) {
+																			$main_content .= '
+																				<div style="font-size:1px;height:4px;"></div>
+																				<form action="?subtopic=adminpanel" method="post" style="padding:0px;margin:0px;">
+																					<div class="BigButton" style="background-image:url('.$layout_name.'/images/global/buttons/sbutton_green.gif)">
+																						<div onmouseover="MouseOverBigButton(this);" onmouseout="MouseOutBigButton(this);"><div class="BigButtonOver" style="background-image:url('.$layout_name.'/images/global/buttons/sbutton_green_over.gif);"></div>
+																							<input class="ButtonText" type="image" name="Logout" alt="Logout" src="'.$layout_name.'/images/global/buttons/_sbutton_painel.gif">
 																						</div>
 																					</div>
 																				</form>';
