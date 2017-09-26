@@ -144,7 +144,7 @@ if(!$logged)
 						</div>
 					</td>
 				</tr>
-				<br/>
+				<p/>
 				<center>
 					<h1>New to '.$config['server']['serverName'].'?</h1>
 				</center>
@@ -403,7 +403,8 @@ else
 							<div class="BoxFrameEdgeRightBottom" style="background-image:url('.$layout_name.'/images/global/content/box-frame-edge.gif);" /></div>
 							<div class="BoxFrameEdgeLeftBottom" style="background-image:url('.$layout_name.'/images/global/content/box-frame-edge.gif);" /></div>
 						</div>
-					</div><br/>';
+					</div>
+					<p/>';
 			//IF BANK TRANSFER TO CONFIRM
 			//if(empty($account_reckey))
 			$getTransfer = $SQL->query("SELECT COUNT(*) FROM `z_shop_donates` WHERE `status` = 'confirm' AND `account_name` = '".$account_logged->getName()."'")->fetch();
@@ -441,7 +442,8 @@ else
 								<div class="BoxFrameEdgeRightBottom" style="background-image:url('.$layout_name.'/images/global/content/box-frame-edge.gif);" /></div>
 								<div class="BoxFrameEdgeLeftBottom" style="background-image:url('.$layout_name.'/images/global/content/box-frame-edge.gif);" /></div>
 							</div>
-						</div><br/>';
+						</div>
+						<p/>';
 			}
 			//IF BANK TRANSFER TO CONFIRM ADMIN
 			//if(empty($account_reckey))
@@ -481,7 +483,8 @@ else
 								<div class="BoxFrameEdgeRightBottom" style="background-image:url('.$layout_name.'/images/global/content/box-frame-edge.gif);" /></div>
 								<div class="BoxFrameEdgeLeftBottom" style="background-image:url('.$layout_name.'/images/global/content/box-frame-edge.gif);" /></div>
 							</div>
-						</div><br/>';
+						</div>
+						<p/>';
 			}
 		}
 			//CHARACTERS
@@ -757,7 +760,7 @@ else
 				<div class="BoxFrameEdgeLeftBottom" style="background-image:url('.$layout_name.'/images/global/content/box-frame-edge.gif);" /></div>
 			</div>
 		</div>
-		<br/>';
+		<p/>';
 		
 		$main_content .= '
 			<a name="General+Information" ></a>
@@ -942,9 +945,8 @@ else
 						</div>
 					</td>
 				</tr>
-				<br/>
-				<br/>';
-		/*
+				<p/>
+				';
 		$main_content .= '
 			<a name="Loyalty+Highscore+Character" ></a>
 				<div class="TopButtonContainer" >
@@ -1023,10 +1025,7 @@ else
 					</tr>
 				</table>
 			</div>
-				<br>
-				<br>';
-			*/
-		
+				<p/>';		
 		$main_content .= '
 			<a name="Donates" ></a>
 			<div class="TopButtonContainer" >
@@ -1150,8 +1149,7 @@ else
 					</div>
 				</td>
 			</tr>
-			<br/>
-			<br/>';
+			<p/>';
 		
 		$main_content .= '
 			<a name="Products+Available" ></a>
@@ -1229,8 +1227,7 @@ else
 					</div>
 				</td>
 			</tr>
-			<br/>
-			<br/>';
+			<p/>';
 		
 		$main_content .= '
 			<a name="Products+Ready+To+Use" ></a>
@@ -1327,8 +1324,7 @@ else
 					</div>
 				</td>
 			</tr>
-			<br/>
-			<br/>';		
+			<p/>';		
 			#history of products bought
 			$main_content .= '
 				<a name="History" ></a>
