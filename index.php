@@ -46,4 +46,4 @@ if(in_array($_REQUEST['subtopic'], array("play", "refresh", "client_options_serv
 	else
 		echo $main_content;
 }
-// LAYOUT END
+// LAYOUT END TESTE
