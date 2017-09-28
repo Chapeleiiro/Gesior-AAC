@@ -162,11 +162,11 @@ if ($_POST['acao'] == "addPoints") {
 	$pointsPrice = trim($_POST['pointsPrice']);
 	$pointsDesc = trim($_POST['pointsDesc']);
 	$offerType = "premiumpoints";
-	$offerName = $pointsAmount.' Premium Points';
+	$offerName = $pointsAmount.' Coins';
 	$data = time();
 	$addPoints = $SQL->query("INSERT INTO `z_shop_offer` (`category`,`price`,`count`,`offer_type`,`offer_description`,`offer_name`,`offer_date`) VALUES (6,'$pointsPrice','$pointsAmount','$offerType','$pointsDesc','$offerName','$data')");
 	if ($addPoints)
-		echo json_encode(array('status' => true, 'msg' => 'Premium points package was successfully added.'));
+		echo json_encode(array('status' => true, 'msg' => 'Coins package was successfully added.'));
 }
 
 if ($_POST['acao'] == "delPoints") {
@@ -183,7 +183,7 @@ if ($_POST['acao'] == "playerPoints") {
 	$account = new Account();
 	$account->find($accounName);
 	
-	$account->setPremiumPoints($account->getPremiumPoints() + $pointsAdd);
+	$account->setCoins($account->getCoins() + $pointsAdd);
 	$account->save();
 	
 	if($account)
