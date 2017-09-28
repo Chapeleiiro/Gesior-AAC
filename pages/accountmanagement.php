@@ -285,7 +285,7 @@ else
 																			</span>
 																			<small>
 																				<br>The server is configured to free premium account , good game !<br>
-																				(Balance of premium points: '.(($account_logged->getPremiumPoints() > 0) ? '<font class="green">'.$account_logged->getPremiumPoints().'</font>' : '<font class="red">0</font>').' points)
+																				(Balance of coins: '.(($account_logged->getCoins() > 0) ? '<font class="green">'.$account_logged->getCoins().'</font>' : '<font class="red">0</font>').' points)
 																			</small>
 																		</td>';
 																} else {
@@ -433,7 +433,7 @@ else
 												<div style="font-size:1px;height:4px;" ></div>
 											</div>
 											<p><b>'.$getTransfer[0].' donate'.(($getTransfer[0] >= 2) ? 's' : '').' pending of confirmation!</b></p>
-											<p>You bought premium points in our shop using or donate system, but need to confirm your donation. Click "Confirm" to see which donate is pending confirmation.</p>
+											<p>You bought coins in our shop using or donate system, but need to confirm your donation. Click "Confirm" to see which donate is pending confirmation.</p>
 										</td>
 									<tr>
 								</table>
@@ -474,7 +474,7 @@ else
 												<div style="font-size:1px;height:4px;" ></div>
 											</div>
 											<p><b>'.$getTransferAdmin[0].' donate'.(($getTransfer[0] >= 2) ? 's' : '').' confirmed!</b></p>
-											<p>You have some donate confirmations. Confirm and give the premium points to the player.</p>
+											<p>You have some donate confirmations. Confirm and give the coins to the player.</p>
 										</td>
 									<tr>
 								</table>
@@ -847,18 +847,18 @@ else
 													$main_content .= '
 														</tr>
 														<tr style="background-color:#F1E0C6;" >
-															<td class="LabelV" >Premium Points:</td>
-															<td>'.$account_logged->getPremiumPoints().' premium points<br>';
+															<td class="LabelV" >Coins:</td>
+															<td>'.$account_logged->getCoins().' coins<br>';
 															$accname = $account_logged->getName();
 														$sql_points = "SELECT * FROM `z_shop_donates` WHERE `account_name` = '$accname' AND `status` = 'received' ORDER BY `date` DESC LIMIT 1";
 														$last_points_bought = $SQL->query($sql_points)->fetch();
 														if($SQL->query($sql_points)->fetchColumn() > 0) {
 															$getServiceInfo = $SQL->query("SELECT `count` FROM `z_shop_offer` WHERE `id` = '".$last_points_bought['service_id']."'")->fetch();
 															$main_content .= '
-																<small>(Your last purchase of premium points was on '.date("M d Y",$last_points_bought['date']).'. You bought '.$last_points_bought['points'].' premium points.)</small>';
+																<small>(Your last purchase of coins was on '.date("M d Y",$last_points_bought['date']).'. You bought '.$last_points_bought['points'].' coins.)</small>';
 														} else
 															$main_content .= '
-																<small>(You have not bought premium points yet. <a href="?subtopic=accountmanagement&action=donate" title="Buy now!">Buy now!</a>)</small>';
+																<small>(You have not bought coins yet. <a href="?subtopic=accountmanagement&action=donate" title="Buy now!">Buy now!</a>)</small>';
 														$main_content .= '
 															</td>
 														</tr>';
@@ -1086,7 +1086,7 @@ else
 																							</span></span><br/>
 																Your donations are an incentive for us always bring the best.<br/>
 																<ul>
-																	<li>Your donations will be reversed in premium points.</li>
+																	<li>Your donations will be reversed in coins.</li>
 																	<li>Note that some types of donations need to be confirmed. Will be listed below the outstanding donations that needs confirmation.</li>
 																</ul>
 															</td>
@@ -3930,7 +3930,7 @@ else
 															</td>
 														</tr>
 														<tr>
-															<td>After confirmed your donation our team will be up to 24 hours to credit your premium points.</td>
+															<td>After confirmed your donation our team will be up to 24 hours to credit your coins.</td>
 														</tr>
 													</table>
 												</div>
@@ -4012,7 +4012,7 @@ else
 															$main_content .= '
 																<tr bgcolor="'.$bgcolor.'">
 																	<td>'.date("M d Y",$doHistory['date']).'</td>
-																	<td>'.$doHistory['points'].' Premium Points</td>
+																	<td>'.$doHistory['points'].' Coins</td>
 																	<td>'.$doHistory['price'].' BRL</td>
 																	<td>'.$doHistory['method'].'</td>';
 																$bankref = explode("-",$doHistory['reference']);
