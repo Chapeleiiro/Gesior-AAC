@@ -41,7 +41,7 @@ if(isset($_POST['notificationType'])) {
 		$add = $SQL->query("INSERT INTO `pagseguro` SET `date` = '".$transaction->date."', `code` = '".$transaction->code."', `reference` = '".$transaction->reference."', `type` = '".$transaction->type."', `status` = '".$transaction->status."', `lastEventDate` = '".$transaction->lastEventDate."'");
 	
 	if ($transaction->status == 3) {
-		$accInfo->setPremiumPoints($accInfo->getPremiumPoints() + $points_bought);
+		$accInfo->setCoins($accInfo->getCoins() + $points_bought);
 		$accInfo->setLoyalty($accInfo->getLoyalty() + $loyaltyPoints);
 		$accInfo->save();
 		$update_payment = $SQL->query("UPDATE `z_shop_donates` SET `status` = 'received' WHERE `reference` = '$ref' AND `account_name` = '$acc_name'");
